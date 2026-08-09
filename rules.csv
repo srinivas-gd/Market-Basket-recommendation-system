@@ -1,0 +1,33 @@
+antecedents,consequents,confidence,lift
+light cream,chicken,0.2906,4.844
+mushroom cream sauce,escalope,0.3007,3.791
+pasta,escalope,0.3729,4.701
+fromage blanc,honey,0.2451,5.164
+herb & pepper,ground beef,0.3235,3.292
+tomato sauce,ground beef,0.3774,3.841
+whole wheat pasta,olive oil,0.2715,4.122
+pasta,shrimp,0.322,4.507
+"spaghetti, avocado",milk,0.4167,3.215
+"cake, milk",burgers,0.28,3.211
+"chocolate, turkey",burgers,0.2706,3.103
+"milk, turkey",burgers,0.2824,3.238
+"spaghetti, ground beef, cereals",milk,0.459,4.682
+"chicken, ground beef",milk,0.4085,3.152
+"chicken, milk",olive oil,0.2432,3.693
+"chicken, spaghetti",olive oil,0.2016,3.06
+"frozen vegetables, chocolate",shrimp,0.2326,3.255
+"ground beef, chocolate, herb & pepper",spaghetti,0.4412,4.49
+"soup, chocolate",milk,0.3947,3.046
+"spaghetti, ground beef, cooking oil",ground beef,0.3025,3.079
+"ground beef, eggs, herb & pepper",spaghetti,0.3298,3.356
+"spaghetti, eggs, red wine",spaghetti,0.5283,3.034
+mushroom cream sauce,escalope,0.3007,3.791
+pasta,escalope,0.3729,4.701
+"ground beef, herb & pepper, french fries",spaghetti,0.4615,4.697
+fromage blanc,honey,0.2451,5.164
+"frozen vegetables, tomatoes, green tea",tomatoes,0.2315,3.385
+"frozen vegetables, ground beef, spaghetti",ground beef,0.311,3.165
+"frozen vegetables, olive oil, milk",olive oil,0.2034,3.088
+"frozen vegetables, soup, milk",milk,0.5,3.859
+"frozen vegetables, shrimp, mineral water",shrimp,0.3051,3.201
+"spaghetti, ground beef, grated cheese",ground beef,0.3226,3.283

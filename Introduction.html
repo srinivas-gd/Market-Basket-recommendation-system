@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Market Basket Recommendation Engine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f7fc;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1, h3 {
+      font-weight: 600;
+      color: #00796b;
+    }
+
+    h2 {
+      color: #555;
+    }
+
+    a {
+      color: #00796b;
+      text-decoration: none;
+    }
+
+    /* Container Styles */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #a8edea, #fed6e3);
+    }
+
+    .intro-card {
+      background: #fff;
+      padding: 40px 60px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      width: 100%;
+      text-align: center;
+      overflow-y: auto;
+      height: 85vh;
+    }
+
+    .intro-card h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .intro-card p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    /* Styled List */
+    .intro-card ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      text-align: left;
+    }
+
+    .intro-card ul li {
+      margin-bottom: 15px;
+      font-size: 16px;
+      color: #555;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .intro-card ul li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #00796b;
+      font-size: 20px;
+    }
+
+    /* Button Styles */
+    .intro-card button {
+      background-color: #00796b;
+      color: white;
+      font-size: 16px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .intro-card button:hover {
+      background-color: #004d40;
+    }
+
+    /* Scroll Bar Styling */
+    .intro-card::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .intro-card::-webkit-scrollbar-thumb {
+      background-color: #00796b;
+      border-radius: 10px;
+    }
+
+    .intro-card::-webkit-scrollbar-track {
+      background: #f4f7fc;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      .intro-card {
+        padding: 20px;
+      }
+
+      .intro-card h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="intro-card">
+      <h1>Hello Srinivas, Manoj {{ session.srinivas }}!</h1>
+      <p>
+        Welcome to the <span style="color: #00796b;">Market Basket Recommendation Engine</span>!<br><br>
+        This system uses data mining techniques to find associations between products bought together, helping businesses improve their sales by recommending products that customers are most likely to buy together.
+      </p>
+
+      <h3>🔍 What is a Market Basket Recommendation Engine?</h3>
+      <p>
+        A Market Basket Recommendation Engine analyzes customer purchasing behavior to identify product associations. 
+        It determines which items are often bought together and recommends them to customers at the right time—either while shopping or just before checkout.
+        Think: Customers who bought a phone also added a screen protector and a case. We show those recommendations automatically, increasing your chances of a larger sale.
+      </p>
+
+      <h3>✅ Key Features</h3>
+      <ul>
+        <li><strong>Frequently Bought Together:</strong> Display smart recommendations on product pages, cart pages, or during checkout.</li>
+        <li><strong>Real-Time Personalization:</strong> Updates suggestions live based on a customer’s ongoing behavior.</li>
+        <li><strong>Cross-Selling and Upselling:</strong> Use insights to encourage complementary or premium product purchases.</li>
+        <li><strong>AI-Powered Pattern Detection:</strong> Uses algorithms like Apriori, FP-Growth, and Association Rule Mining to detect frequently bought items together.</li>
+        <li><strong>Easy Integration:</strong> Compatible with Shopify, Magento, WooCommerce, and custom-built eCommerce platforms.</li>
+        <li><strong>Visual Product Pairing:</strong> Show product suggestions with images, prices, ratings, and quick-add options.</li>
+      </ul>
+
+      <h3>📈 Business Benefits</h3>
+      <ul>
+        <li><strong>Increased Revenue:</strong> Add 15–25% to your average order value.</li>
+        <li><strong>Improved UX:</strong> Help users find what they need faster.</li>
+        <li><strong>Lower Cart Abandonment:</strong> Smart bundles increase perceived value.</li>
+        <li><strong>Inventory Optimization:</strong> Promote high-margin or overstocked items.</li>
+      </ul>
+
+      <h3>💼 Use Cases</h3>
+      <ul>
+        <li>E-commerce websites: Boosting average order value with bundled suggestions.</li>
+        <li>Supermarkets & retail chains: Recommending common pairings (e.g., chips + dip).</li>
+        <li>Fashion & apparel: Outfit matching (e.g., shirt + jeans + shoes).</li>
+        <li>Home improvement stores: Toolkits, spare parts, complementary purchases.</li>
+      </ul>
+
+      <h3>🛠 How It Works</h3>
+      <ul>
+        <li><strong>Step 1:</strong> Collect Data – Analyze historical purchase records and browsing behavior.</li>
+        <li><strong>Step 2:</strong> Identify Patterns – Discover combinations using association rule mining.</li>
+        <li><strong>Step 3:</strong> Recommend Smartly – Serve dynamic suggestions to users based on context and historical insights.</li>
+        <li><strong>Step 4:</strong> Learn & Improve – The engine continuously improves itself using real-time user data and feedback loops.</li>
+      </ul>
+
+      <h3>🔐 Privacy & Compliance</h3>
+      <ul>
+        <li>GDPR & CCPA compliant.</li>
+        <li>No Personally Identifiable Information (PII) stored.</li>
+        <li>Secure APIs and data encryption in transit and at rest.</li>
+      </ul>
+
+      <h3>📊 Admin Dashboard (Optional Feature Section)</h3>
+      <ul>
+        <li>View top product pairs.</li>
+        <li>Track conversion uplift.</li>
+        <li>Configure rules manually if needed.</li>
+        <li>A/B test recommendations.</li>
+      </ul>
+
+      <h3>📞 Get Started Today</h3>
+      <p>Want to increase your revenue without increasing traffic? Let our Market Basket Recommendation Engine do the upselling for you.</p>
+      <p>👉 Contact us for a free demo and consultation.</p>
+
+      <form action="{{ url_for('index') }}">
+        <button type="submit">Continue to Dashboard</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

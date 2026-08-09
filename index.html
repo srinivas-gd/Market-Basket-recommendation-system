@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market Basket Recommendation Engine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7fc;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+      color: #00796b;
+    }
+
+    p, ul {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    a {
+      color: #00796b;
+      text-decoration: none;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #a8edea, #fed6e3);
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      color: #fff;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .hero .cta-btn {
+      background-color: #00796b;
+      color: white;
+      font-size: 18px;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero .cta-btn:hover {
+      background-color: #004d40;
+    }
+
+    /* Features Section */
+    .features {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 80px 20px;
+      background-color: #ffffff;
+    }
+
+    .feature {
+      max-width: 280px;
+      text-align: center;
+    }
+
+    .feature-icon {
+      font-size: 40px;
+      color: #00796b;
+      margin-bottom: 20px;
+    }
+
+    .feature h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    /* About Us Section */
+    .about {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 80px 20px;
+      background-color: #f4f7fc;
+    }
+
+    .about-text {
+      max-width: 600px;
+    }
+
+    .about-text h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      font-size: 18px;
+      color: #555;
+    }
+
+    /* Output Section */
+    .output-section {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: 30px auto;
+      text-align: center;
+    }
+
+    .output-section h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #00796b;
+    }
+
+    .output-section p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .output-section .recommendation {
+      font-size: 20px;
+      color: #00796b;
+      font-weight: bold;
+    }
+
+    /* Footer Section */
+    .footer {
+      text-align: center;
+      background-color: #00796b;
+      color: white;
+      padding: 20px;
+    }
+
+    .footer a {
+      color: white;
+      font-weight: bold;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .features {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Market Basket Recommendation Engine</h1>
+      <p>Boost your sales with smart product recommendations based on customer behavior. Increase your revenue effortlessly with our AI-powered solution.</p>
+      <button class="cta-btn" onclick="window.location.href='/login'">Get Started</button>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature">
+      <div class="feature-icon">🔍</div>
+      <h3>Frequent Recommendations</h3>
+      <p>Display smart recommendations to increase average order value.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🤖</div>
+      <h3>Real-Time Personalization</h3>
+      <p>Make recommendations based on live customer behavior.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">💡</div>
+      <h3>AI-Powered Insights</h3>
+      <p>Gain insights into customer behavior and product combinations.</p>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="about">
+    <div class="about-text">
+      <h2>What We Do</h2>
+      <p>Our Market Basket Recommendation Engine leverages advanced machine learning algorithms to offer personalized, real-time product recommendations. By analyzing purchase history and customer data, we identify products that are frequently bought together and automatically suggest them at the right time—boosting conversions, sales, and customer satisfaction.</p>
+    </div>
+  </section>
+
+  <section class="output-section">
+  <h3 style="font-size: 36px; color: #004d40; margin-bottom: 20px;">
+    🌟 Get Smart Product Recommendations
+  </h3>
+
+  <form method="post" style="animation: fadeIn 1s ease-in-out;">
+    <input type="text" name="item" placeholder="e.g., Laptop, Phone, TV" required
+           style="padding: 18px; width: 90%; max-width: 500px; font-size: 20px; border: 2px solid #00796b; border-radius: 14px; margin-bottom: 25px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: 0.3s;">
+    <br>
+    <button type="submit"
+            style="background-color: #00796b; color: white; font-size: 20px; padding: 14px 50px; border: none; border-radius: 12px; cursor: pointer; transition: background-color 0.3s, transform 0.2s;">
+      🚀 Get Recommendations
+    </button>
+  </form>
+
+  {% if recommendation %}
+  <div class="recommendation" style="margin-top: 30px; background-color: #e0f7fa; padding: 20px; border-radius: 14px; font-weight: bold; color: #00796b; font-size: 24px; box-shadow: 0 6px 12px rgba(0,0,0,0.1); animation: fadeIn 1.2s;">
+    📦 {{ recommendation }}
+  </div>
+  {% endif %}
+
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #004d40;
+      box-shadow: 0 0 8px rgba(0, 121, 107, 0.3);
+    }
+
+    button:hover {
+      background-color: #004d40;
+      transform: scale(1.02);
+    }
+  </style>
+</section>
+
+</body>
+</html>

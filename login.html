@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome Back</title>
+  <style>
+    /* Your existing styles (same as shared earlier) */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #e0f2f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: white;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    .login-container p {
+      text-align: center;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #2c7a7b;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .login-btn:hover {
+      background-color: #285e61;
+    }
+
+    .forgot {
+      float: right;
+      font-size: 13px;
+      color: #2c7a7b;
+      text-decoration: none;
+    }
+
+    .secondary {
+      text-align: center;
+      margin: 10px 0;
+      color: #555;
+    }
+
+    .google-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      font-weight: 500;
+      cursor: pointer;
+      margin: 10px 0;
+    }
+
+    .google-btn img {
+      width: 20px;
+      margin-right: 10px;
+    }
+
+    .benefits {
+      font-size: 14px;
+      color: #333;
+      margin-top: 20px;
+    }
+
+    .benefits p::before {
+      content: '⭐';
+      margin-right: 8px;
+    }
+
+    .benefits p:nth-child(2)::before {
+      content: '🛒';
+    }
+
+    .benefits p:nth-child(3)::before {
+      content: '📊';
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Welcome Back</h2>
+    <p>Log in to see your personalized basket</p>
+    <form method="POST" action="/login">
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <button class="login-btn" type="submit">Login</button>
+      <a class="forgot" href="#">Forgot password?</a>
+    </form>
+    <div class="secondary">or</div>
+    <div class="google-btn">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google logo">
+      Continue with Google
+    </div>
+    <div class="benefits">
+      <p>See product suggestions tailored just for you.</p>
+      <p>Save time with your personalized basket</p>
+      <p>Get real-time updates on trending combos</p>
+    </div>
+  </div>
+</body>
+</html>
